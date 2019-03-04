@@ -1,0 +1,51 @@
+@import "component/color.scss";
+@import "component/initial.scss";
+
+@import "component/custom.scss";
+
+#root{
+  background-color: #293B29;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.clock{
+  width: 350px;
+  height: 350px;
+  background-image: url('../img/clock-bg.svg');
+  @include bg_img;
+  background-size: auto;
+  margin: auto;
+  border-radius: 72px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.clock_pointer{
+  transform-origin: center calc(100% - 2px);
+  position: absolute;
+  bottom: calc(50% - 2px);
+}
+
+#hour_pointer{
+  background-image: url('../img/hour-hand.svg');
+  height: 72px;
+  width: 8px;
+  left: calc(50% - 4px);
+}
+
+#minute_pointer{
+  background-image: url('../img/minute-hand.svg');
+  height: 96px;
+  width: 8px;
+  left: calc(50% - 4px);
+}
+
+#second_pointer{
+  background-image: url('../img/second-hand.svg');
+  height: 126px;
+  width: 12px;
+  left: calc(50% - 6px);
+}
