@@ -11,10 +11,11 @@ class Clock extends React.Component {
       }
 
       setInterval(function(){
+         var dateObject = new Date();
          this.setState({
-            hour: new Date().getHours(),
-            minute: new Date().getMinutes(),
-            second: new Date().getSeconds()
+            hour: dateObject.getHours() + dateObject.getMinutes()/60,
+            minute: dateObject.getMinutes(),
+            second: dateObject.getSeconds()
          }
       );}.bind(this),1000);
    }
